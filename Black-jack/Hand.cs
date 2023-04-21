@@ -8,6 +8,11 @@ namespace Black_jack
 {
     internal class Hand
     {
-        private List<card> cards;
+        private List<card> cards = new List<card>();
+
+        public void Setcard(card Card)
+        {
+            cards.Add(new card( Card.getnaam() , Card.getvalue()));
+        }
     }
 }

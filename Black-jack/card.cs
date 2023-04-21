@@ -16,5 +16,14 @@ namespace Black_jack
             this.naam = naam;
             this.value = value;
         }
+
+        public string getnaam() 
+        { 
+            return this.naam;
+        }
+        public string getvalue()
+        {
+            return this.value;
+        }
     }
 }

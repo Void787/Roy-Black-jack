@@ -9,17 +9,16 @@ namespace Black_jack
 {
     internal class player
     {
-        private List<Hand> hand;
+        Hand Hand = new Hand();
         private bool isplaying;
 
-        public void Stand() {
-
+        public bool Stand() {
+            return true; 
         }
 
-        public bool hit(string card)
+        public void hit(card Card)
         {
-
-            return true;
+            Hand.Setcard(Card);
         }
     }
 }

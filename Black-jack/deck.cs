@@ -26,5 +26,7 @@ namespace Black_jack
                 cards.Add(new card(currentname + " King", "10"));
             }
         }
+
+        public List<card> Getcards() { return cards; } 
     }
 }
