@@ -14,5 +14,7 @@ namespace Black_jack
         {
             cards.Add(new card( Card.getnaam() , Card.getvalue()));
         }
+
+        public List<card> Getcards() {  return cards; }
     }
 }

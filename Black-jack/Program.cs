@@ -4,7 +4,13 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("");
+            Console.WriteLine("welcome to blackjack!");
+
+            dealer dealer = new();
+            player player = new();
+            deck deck = new();
+
+
         }
     }
 }

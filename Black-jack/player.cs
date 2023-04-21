@@ -10,7 +10,7 @@ namespace Black_jack
     internal class player
     {
         Hand Hand = new Hand();
-        private bool isplaying;
+        private int winstreak;
 
         public bool Stand() {
             return true; 
@@ -19,6 +19,11 @@ namespace Black_jack
         public void hit(card Card)
         {
             Hand.Setcard(Card);
+        }
+
+        public void playerwon()
+        {
+            this.winstreak++;
         }
     }
 }

@@ -28,5 +28,6 @@ namespace Black_jack
         }
 
         public List<card> Getcards() { return cards; } 
+        public void Setcards (List<card> cards) { this.cards = cards; }
     }
 }
