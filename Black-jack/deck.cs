@@ -16,7 +16,7 @@ namespace Black_jack
         {
             foreach (string currentname in naam)
             {
-                cards.Add(new card(currentname + " Ace", "1 / 10"));
+                cards.Add(new card(currentname + " Ace", "10"));
                 foreach (string value in values)
                 {
                     cards.Add(new card(currentname + " " + value, value));

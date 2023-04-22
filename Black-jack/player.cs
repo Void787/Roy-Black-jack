@@ -11,9 +11,11 @@ namespace Black_jack
     {
         Hand Hand = new Hand();
         private int winstreak;
+        public bool klaar = false;
 
-        public bool Stand() {
-            return true; 
+        public void Stand() 
+        {
+            this.klaar = true; 
         }
 
         public void hit(card Card)
@@ -24,6 +26,22 @@ namespace Black_jack
         public void playerwon()
         {
             this.winstreak++;
+        }
+
+        public void playershowhand()
+        {
+            List<card> cards = Hand.Getcards();
+            foreach (card card in cards)
+            {
+                string first = card.getnaam();
+                string second = card.getvalue();
+                Console.WriteLine("card Name: " + first + " Value: " + second);
+            }
+        }
+
+        public Hand gethand()
+        {
+            return this.Hand;
         }
     }
 }

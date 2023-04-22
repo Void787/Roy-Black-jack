@@ -13,15 +13,22 @@ namespace Black_jack
         private card first;
         private int counted;
         private int countedD;
+        public bool klaar = false;
+        private int winstreak;
 
-        public bool Stand()
+        public void Stand()
         {
-            return true;
+            this.klaar = true;
         }
 
         public void Hit(card Card)
         {
             Hand.Setcard(Card);
+        }
+
+        public void dealerwon()
+        {
+            this.winstreak++;
         }
 
         public card Givecard(deck deck)
@@ -31,6 +38,8 @@ namespace Black_jack
             try
             {
                 this.first = cards.First(card => card != null);
+                cards.Remove(this.first);
+                cards.Add(this.first);
             }
             catch (InvalidOperationException) 
             {
@@ -115,6 +124,7 @@ namespace Black_jack
             {
                 Console.WriteLine("player lost");
                 go_on = false;
+                dealerwon();
             }
             if (go_on = true && this.countedD > 21)
             {
@@ -131,8 +141,20 @@ namespace Black_jack
             if (go_on = true && this.counted < this.countedD )
             {
                 Console.WriteLine("player lost");
+                dealerwon();
             }
             
+        }
+
+        public void dealerhand()
+        {
+            List<card> cards = Hand.Getcards();
+            foreach (card card in cards)
+            {
+                string first = card.getnaam();
+                string second = card.getvalue();
+                Console.WriteLine("card Name: " + first + " Value: " + second);
+            }
         }
     }
 }

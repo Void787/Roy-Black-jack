@@ -19,11 +19,11 @@ namespace Black_jack
 
         public string getnaam() 
         { 
-            return this.naam;
+            return naam;
         }
         public string getvalue()
         {
-            return this.value;
+            return value;
         }
     }
 }
